@@ -9,8 +9,8 @@ class Raindrop {
     diam = 20;  
     loc = new PVector(random(diam,width-diam),0);
     vel = new PVector(0,0.5);
-    acc = new PVector(0,0.1);
-    c = color(255);
+    acc = new PVector(0,10);
+    c = color(#F428F5);
     loc.add(vel);
   }
 
@@ -36,7 +36,7 @@ class Raindrop {
   
   void reset() {
     loc = new PVector(random(diam,width-diam),0);
-    vel = new PVector(0,3);
-    acc = new PVector(0,0.1);
+    vel = new PVector(0,2);
+    acc = new PVector(0,10);
   }
 }
