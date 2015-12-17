@@ -6,11 +6,11 @@ class Raindrop {
 
 //this is a constructor. you can have more than one constructor for a given class
   Raindrop(float x,float y) {
-    diam = 100;
+    diam = 20;  
     loc = new PVector(random(diam,width-diam),0);
-    vel = new PVector(0,3);
+    vel = new PVector(0,0.5);
     acc = new PVector(0,0.1);
-    c = color(random(200,255), random(200,255), random(200,255));
+    c = color(255);
     loc.add(vel);
   }
 
@@ -21,6 +21,7 @@ class Raindrop {
 
   void display() {
     fill(c);
+    noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
 
