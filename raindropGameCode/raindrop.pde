@@ -6,11 +6,11 @@ class Raindrop {
 
   //this is a constructor. you can have more than one constructor for a given class
   Raindrop(float x, float y) {
-    diam = 50;  
+    diam = 20;  
     loc = new PVector(x,y);
     vel = new PVector(0, 0.5);
     acc = new PVector(0, .1);
-    c = color(255, 255, 255, 20);
+    c = color(200, 200, 255, 200);
     loc.add(vel);
   }
 
@@ -33,16 +33,9 @@ class Raindrop {
     }
   }
 
-  void resetFalse() {
+  void reset() {
     loc = new PVector(random(diam, width-diam), 0);
     vel = new PVector(0, 0.5);
     acc = new PVector(0, 0.1);
-  }
-  void resetTrue() {
-    loc = new PVector(random(diam, width-diam), 0);
-    vel = new PVector(0, 0.5);
-    acc = new PVector(0, 0.1);
-    acc.mult(1.5);
-    //if(score>=20){
   }
 }
