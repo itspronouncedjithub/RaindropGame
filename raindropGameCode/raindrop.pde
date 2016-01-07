@@ -7,7 +7,7 @@ class Raindrop {
   //this is a constructor. you can have more than one constructor for a given class
   Raindrop(float x, float y) {
     diam = 20;  
-    loc = new PVector(x,y);
+    loc = new PVector(x, y);
     vel = new PVector(0, 0.5);
     acc = new PVector(0, .1);
     c = color(200, 200, 255, 200);

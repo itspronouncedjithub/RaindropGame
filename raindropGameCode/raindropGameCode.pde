@@ -1,7 +1,7 @@
 PVector mouse;   //declare a P
 int score;
 Bucket b;                                                               //declare a new Bucket called b
-PImage storm;                                                           //
+PImage storm;                                                           //declare image
 
 ArrayList <Raindrop> r = new ArrayList<Raindrop>();
 
@@ -34,11 +34,14 @@ void draw() {
     if (x.isInContactWith(mouse)) {                                     //check to see if the raindrop is in contact with the point represented by the PVector called mouse
       x.reset();                                                        //if it is, reset the raindrop
       score = score+1;                                                  //if it is, add one to score
+      r.remove(i);
     }
-    if (x.loc.y > height + x.diam/2) {                                  //check to see if the raindrop goes below the bottom of the screen
+    if (x.loc.y > height + x.diam/2) {        //check to see if the raindrop goes below the bottom of the screen
       x.reset();                                                        //if it does, reset the raindrop
+      r.remove(i);
     }
   }
+
   fill (200);
   ellipse(-20, -30, 30, 100);
   b.display();
