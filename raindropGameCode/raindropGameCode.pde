@@ -29,8 +29,14 @@ void draw() {
     textSize(100);
     text("RAINDROP GAME", width/2, height/2 - 40);
     textSize(40);
-    text("press space to begin",width/2,height/2 + 40);
-    if(kePressed
+    text("press enter to begin", width/2, height/2 + 40);
+
+
+    if (keyPressed) {
+      if (key == ENTER) {
+        menu=menu+1;
+      }
+    }
   } else if (menu==1) {
     mouse.set(mouseX, mouseY);                                            //set value of mouse as mouseX,mouseY
     background(0, 0, 50);                                                 //set background
@@ -56,6 +62,6 @@ void draw() {
     ellipse(-20, -30, 30, 100);
     b.display();
     textSize(50);                                                         //set text size
-    text(score, 10, 100);                                                 //place score text
+    text(score, 100, 100);                                                 //place score text
   }
 }
