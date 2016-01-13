@@ -6,9 +6,11 @@ float menu;                                                             //declar
 
 ArrayList <Raindrop> r = new ArrayList<Raindrop>();                     //create arraylist
 
+
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
 // You can start out by just using the single Raindrop as you test
+
 
 
 void setup() {                                                          //this runs once
@@ -112,5 +114,6 @@ void draw() {                                                           //this r
     b.display();                                                        //display bucket
     textSize(50);                                                       //set text size
     text(score, 100, 100);                                              //place score text
+
   }
 }
